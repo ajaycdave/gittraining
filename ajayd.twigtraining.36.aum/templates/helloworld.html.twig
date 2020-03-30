@@ -1,0 +1,23 @@
+{# Simplet print variable value #}
+{{ my_var }}
+<br/>
+{{- foo -}}
+<br/>
+{#- Remove before and after whitspace  -#}
+{%- if foo -%}{{- foo -}}{%- endif -%}
+{# set variable  and value #}
+
+{% set foo = 'foo' %}
+{% set foo_bar = 'foo bar' %}
+
+{% block foo %}
+    {% if true %}
+        true
+    {% endif %}
+{% endblock %}
+
+
+
+
+
+
