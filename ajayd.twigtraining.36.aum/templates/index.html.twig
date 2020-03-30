@@ -1,0 +1,105 @@
+{% extends "layout.twig" %}
+{% import "forms.html" as forms %}
+{% use "vertical_boxes_skeleton.twig" %}
+    {% use "teasers_skeleton.twig" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>Index</h1>
+    <p class="important">
+        Welcome on my awesome homepage.
+    </p>
+    {% do 1 + 2 %}
+    <p>{{ my_var }}</p>
+
+    <h1>{{ "For loop Example" }}</h1>
+
+
+    {% for i in 0..50 %}
+    * {{ i }}
+	{% endfor %}
+
+<h1>Members For Loop </h1>
+<ul>
+    {% for user in users %}
+        <li>{{ user.username|e }}</li>
+    {% endfor %}
+</ul>
+
+<h1>Members For Loop with index </h1>
+<ul>
+    {% for user in users %}
+        <li>{{loop.index}} - {{ user.username|e }}</li>
+    {% endfor %}
+</ul>
+
+<h1>Members For Loop with Key</h1>
+<ul>
+    {% for key,user in users %}
+        <li>{{key}} - {{ user.username|e }}</li>
+    {% endfor %}
+</ul>
+
+<h1>Members Top 2 memeber</h1>
+<ul>
+    {% for key,user in users|slice(0,2) %}
+        <li>{{key}} - {{ user.username|e }}</li>
+    {% endfor %}
+</ul>
+
+<h1>Members IF Condition</h1>
+{% if users %}
+<ul>
+
+    {% for key,user in users %}
+        <li>{{key}} - {{ user.username|e }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+
+<h1>Letter for loop example</h1>
+{% for letter in 'a'|upper..'z'|upper %}
+    * {{ letter }}
+{% endfor %}
+
+<h1>Form html import and macro tag user</h1>
+<p>{{ forms.input('username') }}</p>
+<p>{{ forms.input('password', null, 'password') }}</p>
+    
+
+        {% block top %}
+        	<p>asdfasdfsf faasdf</p>
+        {% endblock %}
+
+        
+        {% block left_teaser %}
+       	<p> asdfasdfsf faasdf</p>
+        {% endblock %}
+        {% block right_teaser %}
+        asdfasdfsf faasdf
+        {% endblock %}
+
+
+
+        <h1>With Tag</h1>
+
+        {% with %}
+    {% set foo1 = 42 %}
+    {{ foo1 }} {# foo is 42 here #}
+{% endwith %}
+
+foo1 is not visible here any longer
+
+
+
+
+{% endblock %}
+

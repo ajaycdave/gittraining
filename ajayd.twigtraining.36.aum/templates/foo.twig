@@ -1,0 +1,46 @@
+{% extends "layout.twig" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+        .left_box
+        {
+            float: left;
+            margin-bottom:5%;
+            width: 49%;
+        }
+        .right_box
+        {
+            float: right;
+            margin-bottom:5%;
+            width: 49%;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>Embed Tag Top And Bottom </h1>
+     {% embed "vertical_boxes_skeleton.twig" %}
+        {% block top %}
+            Some content for the top box
+        {% endblock %}
+
+        {% block bottom %}
+            Some content for the bottom box
+        {% endblock %}
+    {% endembed %}
+<h1>Embed Tag Left And Right </h1>
+    {% embed "teasers_skeleton.twig" %}
+        {% block left_teaser %}
+            Some content for the top box
+        {% endblock %}
+
+        {% block right_teaser %}
+            Some content for the bottom box
+        {% endblock %}
+    {% endembed %}
+ 
+    
+{% endblock %}
+

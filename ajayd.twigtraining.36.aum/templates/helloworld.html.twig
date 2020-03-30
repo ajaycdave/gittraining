@@ -16,6 +16,23 @@
     {% endif %}
 {% endblock %}
 
+<br>
+{% apply upper %}
+    This text becomes uppercase
+{% endapply %}
+<br/>
+{% apply lower|escape('html') %}
+    <strong>SOME TEXT</strong>
+{% endapply %}
+<br/>
+{% autoescape  %}
+	<script type="text/javascript">
+	alert("hello world");
+	</script>
+    <strong>Everything will be automatically escaped in this block
+    using the HTML strategy</strong>
+{% endautoescape %}
+
 
 
 
