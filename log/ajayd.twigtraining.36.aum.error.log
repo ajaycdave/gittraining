@@ -1,0 +1,18 @@
+2020/03/31 09:43:23 [error] 920#920: *2 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\SyntaxError: Unexpected token "punctuation" of value "|". in /home/ajayd/web/ajayd.twigtraining.36.aum/templates/twig-filter.html.twig:6
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(175): Twig\ExpressionParser->parsePrimaryExpression()
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(70): Twig\ExpressionParser->getPrimary()
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/TokenParser/BlockTokenParser.php(55): Twig\ExpressionParser->parseExpression()
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Parser.php(182): Twig\TokenParser\BlockTokenParser->parse(Object(Twig\Token))
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Parser.php(95): Twig\Parser->subparse(NULL, false)
+#5 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(479): Twig\Parser->parse(Object(Twig\TokenStream))
+#6 /home/aj" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-filter.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/03/31 09:52:47 [error] 920#920: *19 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\SyntaxError: A block must start with a tag name. in /home/ajayd/web/ajayd.twigtraining.36.aum/templates/twig-filter.html.twig:24
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/TokenParser/BlockTokenParser.php(45): Twig\Parser->subparse(Array, true)
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Parser.php(182): Twig\TokenParser\BlockTokenParser->parse(Object(Twig\Token))
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Parser.php(95): Twig\Parser->subparse(NULL, false)
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(479): Twig\Parser->parse(Object(Twig\TokenStream))
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(507): Twig\Environment->parse(Object(Twig\TokenStream))
+#5 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(348): Twig\Environment->compileSource(Object(Twig\Source))
+#6 /home/ajayd/" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-filter.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"

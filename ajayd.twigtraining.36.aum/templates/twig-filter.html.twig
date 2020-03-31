@@ -1,0 +1,28 @@
+{% extends "layout.twig" %}
+
+{% block title %}
+Twig Filter
+{% endblock %}	
+{% block content %}
+	<h1>Twig filter Exercise</h1>
+
+	<h1>abs</h1>
+	<span>Output :{{ number|abs}} </span>
+<h1>Batch</h1>	
+{% set items = ['a', 'b', 'c', 'd', 'e', 'f', 'g'] %}
+
+<table>
+{% for row in items|batch(4, 'No item') %}
+    <tr>
+        {% for column in row %}
+            <td>{{ column }}</td>
+        {% endfor %}
+    </tr>
+{% endfor %}
+</table>
+<h1>capitalize</h1>
+
+{{ 'my twig Filter examples here'|capitalize }}
+
+
+{% endblock %}
