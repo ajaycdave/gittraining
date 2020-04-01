@@ -24,5 +24,21 @@ Twig Filter
 
 {{ 'my twig Filter examples here'|capitalize }}
 
+<h1>column</h1>
+{% set items = [{ 'fruit' : 'apple'}, {'fruit' : 'orange' }] %}
+
+{% set fruits = items|column('fruit') %}
+
+{% for frow in fruits %}	
+	{{ frow }}
+{% endfor %}
+<h1>convert_encoding</h1>
+{{ my_var|convert_encoding('UTF-8', 'iso-2022-jp') }}
+
+Country Name:{{ 'FR'|country_name }}
+{{ 'US'|country_name('fr') }}
+
+{{ 'RUPEES'|currency_symbol('in') }}
+{# fruits now contains ['apple', 'orange'] #}
 
 {% endblock %}

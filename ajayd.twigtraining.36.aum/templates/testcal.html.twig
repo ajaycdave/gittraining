@@ -1,0 +1,100 @@
+{% extends "layout.twig" %}
+ {% block head %}
+<link rel="stylesheet" type="text/css" href="css/datepicker.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link href="google-code-prettify/prettify.css" rel="stylesheet">
+
+   <script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+
+
+<style type="text/css">
+#alert{
+	display:none;
+}
+
+</style>
+
+
+{% endblock %}
+{% block title %}
+Twig Filter
+{% endblock %}	
+{% block content %}
+	<div style="float:left;width:50%; margin-left:20%; margin-top:10%;">
+	<h1>Twig Calendar Exercise</h1>
+	<div class="alert alert-error" id="alert">
+    <strong>Oh snap!</strong>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+          <th>
+              Start date
+              <a href="#" class="btn small" id="date-start" data-date-format="dd.mm.yyyy"  data-date="20.02.2012">Change</a>
+          </th>
+          <th>
+              End date
+              <a href="#" class="btn small" id="date-end" data-date-format="dd.mm.yyyy" data-date="25.02.2012">Change</a>
+          </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td id="date-start-display">20.02.2012</td>
+          <td id="date-end-display">25.02.2012</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+	
+
+{% endblock %}
+ {% block  footer %}
+ 	<script type="text/javascript">
+
+$(function() {
+  $("#date-start").datepicker({
+    showWeek: true,
+    firstDay: 1,
+    maxDate: 'today',
+    beforeShow: function(elem, ui) {
+      $(ui.dpDiv).on('click', 'tbody .ui-datepicker-week-col', function() {
+        $(elem).val('Week ' + $(this).text()).datepicker( "hide" );
+      });
+    }
+  });
+});
+
+
+var startDate = new Date(2012,1,20);
+var endDate = new Date(2012,1,25);
+$('#date-start1')
+    .datepicker()
+    .on('changeDate', function(ev){
+        if (ev.date.valueOf() > endDate.valueOf()){
+            $('#alert').show().find('strong').text('The start date must be before the end date.');
+        } else {
+            $('#alert').hide();
+            startDate = new Date(ev.date);
+            $('#date-start-display').text($('#date-start').data('date'));
+        }
+        $('#date-start').datepicker('hide');
+    });
+$('#date-end')
+    .datepicker()
+    .on('changeDate', function(ev){
+        if (ev.date.valueOf() < startDate.valueOf()){
+            $('#alert').show().find('strong').text('The end date must be after the start date.');
+        } else {
+            $('#alert').hide();
+            endDate = new Date(ev.date);
+            $('#date-end-display').text($('#date-end').data('date'));
+        }
+        $('#date-end').datepicker('hide');
+    });
+
+
+
+    </script>
+{% endblock %}
