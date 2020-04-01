@@ -41,4 +41,25 @@ Country Name:{{ 'FR'|country_name }}
 {{ 'RUPEES'|currency_symbol('in') }}
 {# fruits now contains ['apple', 'orange'] #}
 
+<h1>Date</h1>
+<p>1.{{ "now"|date("m/d/Y") }}</p>
+<h1>Date modify</h1>
+<p>1.{{ "now"|date_modify("+1 day")|date("m/d/Y") }}</p>
+
+<h1>escape</h1>
+<p>{{ "<span>Remove span tag</span>"|escape('html')}}</p>
+<h1>Filter</h1>
+{% set sizes = [34, 36, 38, 40, 42] %}
+{{ sizes|filter(v => v > 36)|join(', ') }}
+<h1>First</h1>
+<p>{{ [1, 2, 3, 4]|first }}</p>
+<h1>Format</h1>
+<p>{{ "I like %s and %s."|format(foo, "bar") }}</p>
+
+
+
+
+
+
+
 {% endblock %}
