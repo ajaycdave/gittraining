@@ -441,3 +441,128 @@ Stack trace:
 #2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(392): Twig\ExpressionParser->parseFilterExpression(Object(Twig\Node\Expression\ArrayExpression))
 #3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(284): Twig\ExpressionParser->parsePostfixExpression(Object(Twig\Node\Expression\ArrayExpression))
 #4 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(175): Twig\ExpressionParser->parsePrimaryExpression(" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-filter.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 10:05:52 [error] 902#902: *3 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "twig-function .html.twig" (looked into: /home/ajayd/web/ajayd.twigtraining.36.aum/templates). in /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php:227
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('twig-function ....')
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('twig-function ....')
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(309): Twig\Environment->getTemplateClass('twig-function ....')
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(277): Twig\Environment->load('twig-function ....')
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/twig-function.php(17): Twig\Environment->render('twig-function ....', Array)
+#5 {main}" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 10:05:58 [error] 902#902: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "twig-function .html.twig" (looked into: /home/ajayd/web/ajayd.twigtraining.36.aum/templates). in /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php:227
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('twig-function ....')
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('twig-function ....')
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(309): Twig\Environment->getTemplateClass('twig-function ....')
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(277): Twig\Environment->load('twig-function ....')
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/twig-function.php(17): Twig\Environment->render('twig-function ....', Array)
+#5 {main}" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 10:06:01 [error] 902#902: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "twig-function .html.twig" (looked into: /home/ajayd/web/ajayd.twigtraining.36.aum/templates). in /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php:227
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('twig-function ....')
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('twig-function ....')
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(309): Twig\Environment->getTemplateClass('twig-function ....')
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(277): Twig\Environment->load('twig-function ....')
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/twig-function.php(17): Twig\Environment->render('twig-function ....', Array)
+#5 {main}" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 10:06:12 [error] 902#902: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "twig-function .html.twig" (looked into: /home/ajayd/web/ajayd.twigtraining.36.aum/templates). in /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php:227
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('twig-function ....')
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('twig-function ....')
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(309): Twig\Environment->getTemplateClass('twig-function ....')
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(277): Twig\Environment->load('twig-function ....')
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/twig-function.php(17): Twig\Environment->render('twig-function ....', Array)
+#5 {main}" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 10:06:35 [error] 902#902: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "twig-function .html.twig" (looked into: /home/ajayd/web/ajayd.twigtraining.36.aum/templates). in /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php:227
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('twig-function ....')
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('twig-function ....')
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(309): Twig\Environment->getTemplateClass('twig-function ....')
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(277): Twig\Environment->load('twig-function ....')
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/twig-function.php(17): Twig\Environment->render('twig-function ....', Array)
+#5 {main}" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 10:06:36 [error] 902#902: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "twig-function .html.twig" (looked into: /home/ajayd/web/ajayd.twigtraining.36.aum/templates). in /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php:227
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('twig-function ....')
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('twig-function ....')
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(309): Twig\Environment->getTemplateClass('twig-function ....')
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(277): Twig\Environment->load('twig-function ....')
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/twig-function.php(17): Twig\Environment->render('twig-function ....', Array)
+#5 {main}" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 10:06:36 [error] 902#902: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "twig-function .html.twig" (looked into: /home/ajayd/web/ajayd.twigtraining.36.aum/templates). in /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php:227
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('twig-function ....')
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('twig-function ....')
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(309): Twig\Environment->getTemplateClass('twig-function ....')
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(277): Twig\Environment->load('twig-function ....')
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/twig-function.php(17): Twig\Environment->render('twig-function ....', Array)
+#5 {main}" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 10:06:36 [error] 902#902: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "twig-function .html.twig" (looked into: /home/ajayd/web/ajayd.twigtraining.36.aum/templates). in /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php:227
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('twig-function ....')
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('twig-function ....')
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(309): Twig\Environment->getTemplateClass('twig-function ....')
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(277): Twig\Environment->load('twig-function ....')
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/twig-function.php(17): Twig\Environment->render('twig-function ....', Array)
+#5 {main}" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 10:06:37 [error] 902#902: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "twig-function .html.twig" (looked into: /home/ajayd/web/ajayd.twigtraining.36.aum/templates). in /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php:227
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Loader/FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('twig-function ....')
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('twig-function ....')
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(309): Twig\Environment->getTemplateClass('twig-function ....')
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(277): Twig\Environment->load('twig-function ....')
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/twig-function.php(17): Twig\Environment->render('twig-function ....', Array)
+#5 {main}" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 10:17:36 [error] 902#902: *18 FastCGI sent in stderr: "PHP message: PHP Notice:  Array to string conversion in /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Environment.php(358) : eval()'d code on line 61" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 10:18:01 [error] 902#902: *18 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\SyntaxError: The "attribute" function takes at least two arguments (the variable and the attributes). in /home/ajayd/web/ajayd.twigtraining.36.aum/templates/twig-function.html.twig:7
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(235): Twig\ExpressionParser->getFunctionNode('attribute', 7)
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(175): Twig\ExpressionParser->parsePrimaryExpression()
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(70): Twig\ExpressionParser->getPrimary()
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Parser.php(139): Twig\ExpressionParser->parseExpression()
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/TokenParser/BlockTokenParser.php(45): Twig\Parser->subparse(Array, true)
+#5 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Parser.php(182): Twig\Token" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 10:28:18 [error] 902#902: *34 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\SyntaxError: The "attribute" function takes at least two arguments (the variable and the attributes). in /home/ajayd/web/ajayd.twigtraining.36.aum/templates/twig-function.html.twig:8
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(235): Twig\ExpressionParser->getFunctionNode('attribute', 8)
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(175): Twig\ExpressionParser->parsePrimaryExpression()
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(70): Twig\ExpressionParser->getPrimary()
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Parser.php(139): Twig\ExpressionParser->parseExpression()
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/TokenParser/BlockTokenParser.php(45): Twig\Parser->subparse(Array, true)
+#5 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Parser.php(182): Twig\Token" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 10:28:19 [error] 902#902: *34 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\SyntaxError: The "attribute" function takes at least two arguments (the variable and the attributes). in /home/ajayd/web/ajayd.twigtraining.36.aum/templates/twig-function.html.twig:8
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(235): Twig\ExpressionParser->getFunctionNode('attribute', 8)
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(175): Twig\ExpressionParser->parsePrimaryExpression()
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(70): Twig\ExpressionParser->getPrimary()
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Parser.php(139): Twig\ExpressionParser->parseExpression()
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/TokenParser/BlockTokenParser.php(45): Twig\Parser->subparse(Array, true)
+#5 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Parser.php(182): Twig\Token" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 14:59:24 [error] 902#902: *47 FastCGI sent in stderr: "PHP message: PHP Warning:  constant(): Couldn't find constant Namespace\Classname::CONSTANT_NAME in /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Extension/CoreExtension.php on line 1297" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 15:04:57 [error] 902#902: *59 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\SyntaxError: Unknown "dump" function. in /home/ajayd/web/ajayd.twigtraining.36.aum/templates/twig-function.html.twig:27
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(446): Twig\ExpressionParser->getFunctionNodeClass('dump', 27)
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(235): Twig\ExpressionParser->getFunctionNode('dump', 27)
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(175): Twig\ExpressionParser->parsePrimaryExpression()
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(70): Twig\ExpressionParser->getPrimary()
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Parser.php(139): Twig\ExpressionParser->parseExpression()
+#5 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/TokenParser/BlockTokenParser.php(45): Twig\Parser->subparse(Array, true)
+#6 /home/aj" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 15:06:08 [error] 902#902: *61 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\SyntaxError: Unknown "dump" function. in /home/ajayd/web/ajayd.twigtraining.36.aum/templates/twig-function.html.twig:27
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(446): Twig\ExpressionParser->getFunctionNodeClass('dump', 27)
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(235): Twig\ExpressionParser->getFunctionNode('dump', 27)
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(175): Twig\ExpressionParser->parsePrimaryExpression()
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(70): Twig\ExpressionParser->getPrimary()
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Parser.php(139): Twig\ExpressionParser->parseExpression()
+#5 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/TokenParser/BlockTokenParser.php(45): Twig\Parser->subparse(Array, true)
+#6 /home/aj" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"
+2020/04/02 15:06:08 [error] 902#902: *61 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Twig\Error\SyntaxError: Unknown "dump" function. in /home/ajayd/web/ajayd.twigtraining.36.aum/templates/twig-function.html.twig:27
+Stack trace:
+#0 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(446): Twig\ExpressionParser->getFunctionNodeClass('dump', 27)
+#1 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(235): Twig\ExpressionParser->getFunctionNode('dump', 27)
+#2 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(175): Twig\ExpressionParser->parsePrimaryExpression()
+#3 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/ExpressionParser.php(70): Twig\ExpressionParser->getPrimary()
+#4 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/Parser.php(139): Twig\ExpressionParser->parseExpression()
+#5 /home/ajayd/web/ajayd.twigtraining.36.aum/vendor/twig/twig/src/TokenParser/BlockTokenParser.php(45): Twig\Parser->subparse(Array, true)
+#6 /home/aj" while reading response header from upstream, client: 127.0.0.1, server: ajayd.twigtraining.36.aum, request: "GET /twig-function.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "ajayd.twigtraining.36.aum"

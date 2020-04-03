@@ -11,6 +11,6 @@ $parameters = [
 
 
 // Render our view
-echo $twig->render('twig-filter.html.twig', $parameters);
+echo $twig->render('twig-function.html.twig', $parameters);
 
 ?>

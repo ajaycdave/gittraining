@@ -1,0 +1,45 @@
+{% block title %}
+Twig Function
+{% endblock %}
+{% block content %}
+	<h1>Attribute Function</h1>
+	<p>{{ attribute(catgory,'title') is defined ?'Method exists':'Method does not exists'}}</p>
+	<h1>Constant</h1>
+	{{ some_date|date(constant('DATE_W3C')) }}
+
+	<h1>Cycle</h1>
+	{% set start_year = date() | date('Y') %}
+{% set end_year = start_year + 5 %}
+<p>
+{% for year in start_year..end_year %}
+    {{ cycle(['odd', 'even'], loop.index0) }}
+{% endfor %}
+</p>
+<p>
+{% set fruits = ['apple', 'orange', 'citrus'] %}
+
+{% for i in 0..10 %}
+    {{ cycle(fruits, i) }}
+{% endfor %}
+
+</p>
+<h1>Dump</h1>
+<p>
+	{{ dump(category) }}
+</p>
+<h1>Html Classes</h1>
+<p class="{{ html_classes('a-class', 'another-class', {
+    'errored': object.errored,
+    'finished': object.finished,
+    'pending': object.pending,
+}) }}">How are you doing?</p>
+<h1>Range</h1>
+<p>
+	{% for i in range(0, 6, 2) %}
+    {{ i }},
+{% endfor %}
+</p>
+
+
+
+{% endblock %}

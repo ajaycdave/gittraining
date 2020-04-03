@@ -9,7 +9,10 @@ use Twig\Extra\Html\HtmlExtension;
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
 
 // Instantiate our Twig
-$twig = new \Twig\Environment($loader);
+$twig = new \Twig\Environment($loader, [
+    'debug' => true,
+]);
+$twig->addExtension(new \Twig\Extension\DebugExtension());
 $twig->addExtension(new IntlExtension());
 $twig->addExtension(new HtmlExtension());
 
