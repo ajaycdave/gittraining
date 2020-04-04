@@ -5,7 +5,7 @@ require_once __DIR__.'/bootstrap.php';
 
 $parameters = [
 'my_var' => 'Hello world !!!',
-'foo'=>'Test Twig Template file'
+'foo'=>'Test Twig Template file Test tempalte changes in stages'
 ];
 
 
