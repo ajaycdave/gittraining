@@ -1,0 +1,38 @@
+{% extends "layout.twig" %}
+
+{% block title %}
+Twig Test
+{% endblock %}	
+{% block content %}
+	<h1>Constant</h1>
+	 {% set poststatus = 'published' %}
+
+	{# {% if constant('PUBLISHED') is defined %}	 	
+			Constant Defined ! <br/>
+ 	{% endif %}		 #}
+
+	{% if poststatus is constant('PUBLISHED') and constant('PUBLISHED') is defined  %}
+    the status attribute is exactly the same {{constant('PUBLISHED')}}
+{% endif %}
+<h1>For loop with divisible by </h1>
+ {% for i in my_var %}
+     {% if loop.index is divisible by (2) %}
+     	{% if i is not empty %}
+     		Hello How are You---. {{i}}<br>
+     	{% endif %}
+     	
+     {% endif %}
+    
+{% endfor %}
+<h1>Iterable</h1>
+{% if my_var is iterable %}
+	Iterable use
+{% endif %}
+
+	
+
+{{ "Hello " ~ "fsddas asdfasd" ~ "!" }}
+
+
+
+{% endblock %}
