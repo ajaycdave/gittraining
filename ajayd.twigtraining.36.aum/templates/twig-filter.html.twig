@@ -56,10 +56,36 @@ Country Name:{{ 'FR'|country_name }}
 <h1>Format</h1>
 <p>{{ "I like %s and %s."|format(foo, "bar") }}</p>
 
+<h1>Data uri example</h1>
+{{ '<b>foobar</b>'|data_uri(mime="text/html", parameters={charset: "ascii"}) }}
 
+<h1>INKY TO HTML</h1>
+{% apply inky_to_html %}
+    <row>
+        <columns large="6">sdafasdf</columns>
+        <columns large="6">sdfdsf</columns>
 
+    </row>
+    <row>
+        <columns large="6">sdafasdf</columns>
+        <columns large="6">sdfdsf</columns>
+    </row>
+{% endapply %}
 
+{% apply html_to_markdown %}
+    <html>
+        <h1>Hello!</h1>
+    </html>
+{% endapply %}
+<h1>Custom Filter function</h1>
 
+{{'TWIG asdfasdf'|rot13 }} <br/>
+{{'TWIG asdfasdf'|rot13_with_extenstion }} <br/>
 
+{{'TWIG'|customlower }} <br/>
+
+<br/>
+<h2>Custom Function</h2>
+{{ lipsum('Twig test string')  }}
 
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends "layout.twig" %}
 {% import "forms.html" as forms %}
 {% use "vertical_boxes_skeleton.twig" %}
-    {% use "teasers_skeleton.twig" %}
+{% use "teasers_skeleton.twig" %}
 
 {% block title %}Index{% endblock %}
 {% block head %}
@@ -11,19 +11,32 @@
     </style>
 {% endblock %}
 {% block content %}
+    {% autoescape false  %}
+    {% apply  lower  %}
     <h1>Index</h1>
     <p class="important">
         Welcome on my awesome homepage.
     </p>
+    {% endapply%}
+{% endautoescape %}
     {% do 1 + 2 %}
     <p>{{ my_var }}</p>
 
     <h1>{{ "For loop Example" }}</h1>
-
-
+{% verbatim %}
+  
     {% for i in 0..50 %}
-    * {{ i }}
+        * {{ i }}
 	{% endfor %}
+
+{% endverbatim %}
+
+<h1>Autoescape</h1>
+{% autoescape 'html' %}
+        {% set testhtml="<strong>Hello world</strong>"%}
+ {{testhtml}}
+{% endautoescape %}
+
 
 <h1>Members For Loop </h1>
 <ul>
@@ -91,15 +104,15 @@
 
         <h1>With Tag</h1>
 
-        {% with %}
-    {% set foo1 = 42 %}
-    {{ foo1 }} {# foo is 42 here #}
-{% endwith %}
+    {% with %}
+        {% set foo1 = 42 %}
+         {{ foo1 }} <br/>
+        {% endwith %}
 
-foo1 is not visible here any longer
+    {{foo1}} foo1 is not visible here any longer <br/>
+
+    
 
 
-
-
-{% endblock %}
+    {% endblock %}
 

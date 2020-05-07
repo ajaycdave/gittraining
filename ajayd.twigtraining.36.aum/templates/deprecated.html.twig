@@ -7,20 +7,17 @@
         .important { color: #336699; }
     </style>
 {% endblock %}
-{% block hey %}  
-	{% deprecated 'The "hey" block is deprecated, use "greet" instead.' %}
-  		 {{ block('greet') }}
- {% endblock %}
-
-{% block greet %}<p>Hey Block Deprecated with Greet Block</p>{% endblock %}
-
-
-
 {% block content %}
     <h1>Index</h1>
     <p class="important">
         Welcome on my awesome homepage.
     </p>
     
+{% block hey %}  
+    {% deprecated 'The "hey" block is deprecated, use "greet" instead.' %}
+         {{ block('greet') }}
+ {% endblock %}    
+{% block greet %}<p>Hey Block Deprecated with Greet Block</p>{% endblock %}
 {% endblock %}
+
 
