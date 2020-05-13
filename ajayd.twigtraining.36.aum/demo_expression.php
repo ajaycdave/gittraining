@@ -3,30 +3,36 @@
 require_once __DIR__ .'/bootstrap.php';
 $a  = array(array('username' => 'ajaydave'), array('username' => 'hetdave'), array('username' => 'darshan'));
 $ao = new ArrayObject($a);
-
+echo '------------String Match with preg_match function-----------'.'<bR/>';
 $pattern = "/ca[kf]e/";
 $text    = "He was eating cakeg in the cafe.";
 if (preg_match($pattern, $text)) {
-	$mathstring = "Match found!";
+	echo $mathstring = "Match found!";
 } else {
-	$mathstring = "Match not found.";
+	echo $mathstring = "Match not found.";
 }
+echo '<br/><br/>';
+echo '----------No of match count----------------------------------'.'<bR>';
 
 $matches = preg_match_all($pattern, $text, $array);
-$matches .= " matches were found.";
+echo $matches .= " matches were found.".'<br>';
 
+echo '<br/>-------------- Preg replace with String  -----------------'.'<bR>';
+echo 'Earth revolves around\nthe\tSun'.'<br/>';
 $pattern     = "/\s/";
 $replacement = "-";
 $text        = "Earth revolves around\nthe\tSun";
 // Replace spaces, newlines and tabs
+echo '<br>--------------------Replace spaces, newlines and tabs----------<bR>';
 echo preg_replace($pattern, $replacement, $text);
-echo "<br><br>";
 // Replace only spaces
+echo '<br>---------Replace only spaces----------------</br>';
 echo str_replace(" ", "-", $text).'<br>';
 $pattern = "/[\s,]+/";
 $text    = "My favourite colors are red, green and blue";
 $parts   = preg_split($pattern, $text);
 
+echo '<br>----------Loop through parts array and display substrings--------<br/>';
 // Loop through parts array and display substrings
 foreach ($parts as $part) {
 	echo $part."<br>";
@@ -35,10 +41,13 @@ $pattern = "/^J/";
 $names   = array("Jhon Carter", "Clark Kent", "John Rambo");
 $matches = preg_grep($pattern, $names);
 
+echo '<br>---------Loop through matches array and display matched names--------<br/>';
 // Loop through matches array and display matched names
 foreach ($matches as $match) {
 	echo $match."<br>";
 }
+
+echo '<br>-------------Exta Example-------------------------------------<br>';
 
 $pattern = "/^color/im";
 $text    = "Color red is more visible than \ncolor blue in daylight.";
