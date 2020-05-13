@@ -3,7 +3,9 @@ Twig Function
 {% endblock %}
 {% block content %}
 	<h1>Attribute Function</h1>
-	<p>{{ attribute(catgory,'title') is defined ?'Method exists':'Method does not exists'}}</p>
+
+	<p>{{ attribute(category,2) is defined ?'Method exists':'Method does not exists'}}</p>
+	<p>{{ attribute(category,2) }}</p>
 	<h1>Constant</h1>
 	{{ some_date|date(constant('DATE_W3C')) }}
 
@@ -25,9 +27,11 @@ Twig Function
 
 </p>
 <h1>Dump</h1>
+
 <p>
 	{{ dump(category) }}
 </p>
+
 <h1>Html Classes</h1>
 <p class="{{ html_classes('a-class', 'another-class', {
     'errored': object.errored,

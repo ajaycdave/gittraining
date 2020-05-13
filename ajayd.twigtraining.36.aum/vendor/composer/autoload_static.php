@@ -11,13 +11,16 @@ class ComposerStaticInit1dbafcda2155e3b4700febf0b6d9f762
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
+        'c899bf3d7cf083b79d5e2b2575ed07d5' => __DIR__ . '/..' . '/lorenzo/pinky/src/pinky.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'T' => 
         array (
+            'Twig\\Extra\\Markdown\\' => 20,
             'Twig\\Extra\\Intl\\' => 16,
+            'Twig\\Extra\\Inky\\' => 16,
             'Twig\\Extra\\Html\\' => 16,
             'Twig\\' => 5,
         ),
@@ -30,12 +33,24 @@ class ComposerStaticInit1dbafcda2155e3b4700febf0b6d9f762
             'Symfony\\Component\\Mime\\' => 23,
             'Symfony\\Component\\Intl\\' => 23,
         ),
+        'L' => 
+        array (
+            'League\\HTMLToMarkdown\\' => 22,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twig\\Extra\\Markdown\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/markdown-extra/src',
+        ),
         'Twig\\Extra\\Intl\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/intl-extra/src',
+        ),
+        'Twig\\Extra\\Inky\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/inky-extra/src',
         ),
         'Twig\\Extra\\Html\\' => 
         array (
@@ -68,6 +83,10 @@ class ComposerStaticInit1dbafcda2155e3b4700febf0b6d9f762
         'Symfony\\Component\\Intl\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/intl',
+        ),
+        'League\\HTMLToMarkdown\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/html-to-markdown/src',
         ),
     );
 
