@@ -1,0 +1,109 @@
+{% extends "layout.twig" %}
+{% block head %}
+    
+	{{ parent()}}
+	 <link href="assets/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/vendors/general/select2/dist/css/select2.css" rel="stylesheet" type="text/css"/>
+ 
+    
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+  <div class="row">
+        
+        <div class="col-lg-12">
+            <div class="kt-portlet kt-margin-top-30">
+                <div class="kt-portlet__head">
+                    <div class="kt-portlet__head-label">
+                        <h3 class="kt-portlet__head-title">
+                             {{ thread.title }} 
+                        </h3>
+                    </div>
+                </div>
+                <!--begin::Form-->
+                <form class="kt-form kt-form--label-right">
+                    <div class="kt-portlet__body">
+                        <!--begin: Datatable -->
+                        <table class="table" id="threadpostDataTable" data-url="threadpost.php?action=datalisting&id={{thread.id}}">
+                        </table>
+                        <!--end: Datatable -->
+                    </div>
+
+                </form>
+                <!--end::Form-->
+            </div>
+        </div>
+    </div>
+     {% if getUser()  %}
+     <div class="row">
+        
+        <div class="col-lg-12">
+            <div class="kt-portlet kt-margin-top-30">
+                <div class="kt-portlet__head">
+                    <div class="kt-portlet__head-label">
+                        <h3 class="kt-portlet__head-title">
+                             Thread Post
+                        </h3>
+                    </div>
+                </div>
+                <!--begin::Form-->
+              <form class="kt-form kt-form--label-right" action="threadpost.php?action=store" id="threadpostForm" method="post" name="threadpostForm" enctype="multipart/form-data">
+                        <input type="hidden" name="id" id="id" value="{{thread.id}}">
+                    <div class="kt-portlet__body">
+                          
+                         
+                        
+                         <div class="form-group row">
+                            <div class="col-lg-6">
+                    <label>Description: <i class="text-danger">*</i></label>
+                        <textarea id="descripton" class="form-control" name="description"></textarea>
+                        
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <div class="kt-portlet__foot">
+                        <div class="kt-form__actions">
+                            <div class="row">
+                                <div class="offset-6 col-lg-6">
+                                    <div class="pull-right">
+                                        
+                                          <button type="submit" class="btn btn-success"><i class="ik ik-check-circle" id="cl"></i>POST</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!--end::Form-->
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+	
+{% endblock %}
+{% block jspush %}
+
+	<script src="assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+<script src="assets/js/thread_post/thread_post-datatable.js" type="text/javascript"></script>
+<script src="assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
+<script src="assets/js/thread_post/create-thread_post.js"></script>
+{% endblock %}
+
+{% block  footer%}
+	 {{ parent() }}
+	
+Footer add script
+
+	
+
+{% endblock %}
